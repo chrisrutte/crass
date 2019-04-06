@@ -14,7 +14,7 @@ function doGet(e) {
     var object = getById(sheet, id)
     object['sheet'] = sheet
     
-    var t = HtmlService.createTemplateFromFile('update');
+    var t = HtmlService.createTemplateFromFile('views/update');
     t.object = object
     return t.evaluate();
   }
@@ -24,7 +24,7 @@ function doGet(e) {
     var object = {}
     object['sheet'] = sheet
 
-    var t = HtmlService.createTemplateFromFile('new');
+    var t = HtmlService.createTemplateFromFile('views/new');
     t.object = object
     return t.evaluate();
   }
@@ -33,7 +33,7 @@ function doGet(e) {
     
     var object = getAll('customers')
     
-    var t = HtmlService.createTemplateFromFile('view');
+    var t = HtmlService.createTemplateFromFile('views/view');
     t.object = object
     return t.evaluate();
   }

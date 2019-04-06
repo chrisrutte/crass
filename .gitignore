@@ -1,3 +1,4 @@
 .clasp.json
 .clasprc.json
 config/env.js
+appsscript.json

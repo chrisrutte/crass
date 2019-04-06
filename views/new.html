@@ -2,7 +2,7 @@
 <html>
   <head>
     <base target="_top">
-    <?!= HtmlService.createHtmlOutputFromFile('bootstrap').getContent() ?>
+    <?!= HtmlService.createHtmlOutputFromFile('views/css/bootstrap').getContent() ?>
   </head>
   <body>
    
@@ -14,7 +14,7 @@
       <input value="<?!= object.sheet ?>" id="sheet" type="hidden" name="sheet">
       
       <input id="name" type="text" name="name"><label for="merchant">Name</label><br><br>      
-      <input id="age" type="text" name="age"><label for="age">Email</label><br><br> 
+      <input id="age" type="text" name="age"><label for="age">Age</label><br><br> 
 
       <button type="button" onclick="google.script.run.withSuccessHandler(onSuccess) .withFailureHandler(onFailure) .create(document.querySelector('form'));">Submit</button>
     </form>
