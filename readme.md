@@ -1,8 +1,13 @@
 # crass: quickly change your Google Sheet into a database
-Crass is quick way to change your Google Sheet into a safe, writable and readable database that can be accessed via the browser.
+Crass is quick way to change your Google Sheet into a safe, writable and readable (CRUD) database that can be accessed via the browser.
 Crass uses Google Apps Script.
 
-With this in place you can avoid people making changes in your sheet that don't meet your requirements :)
+This is an easy way to move your Google Sheet more towards a database, benefits of this:
+* the input can be validated and transformed in any desired way
+* default values can be set
+* avoids accidentally removing of data
+* enforces required fields on new entries
+* ability to easily setup notifications if specific fields are changed
 
 # Installation
 
@@ -10,7 +15,7 @@ Clone the repo to a new Google Apps Script project
 
 # Usage
 
-Make sure that your Google Sheet has one column with a unique identifier. Rename this field to `_id`. Besides, your column headers are the field_names. So it is recommended to remove spaces and use fieldNames.
+Make sure that your Google Sheet has one column with a unique identifier. Rename this field to `_id`. Besides, your column headers are the fieldNames. So it is recommended to remove spaces and use fieldNames.
 
 Add the id of the Google Sheet in `config.js`. You can find the id in the URL of your Sheet
 
@@ -18,7 +23,7 @@ Add the id of the Google Sheet in `config.js`. You can find the id in the URL of
       "dbid": '<<your sheet_id>>'
     }
 
-Add the name of the tab in `app.js`
+Add the name of the sheet in `app.js`. For example:
 
     var sheet = 'customers'
 
