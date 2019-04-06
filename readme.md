@@ -1,5 +1,5 @@
 # crass
-Crass is quick way to change your Google Sheet into a safe, writable and readable database.
+Crass is quick way to change your Google Sheet into a safe, writable and readable database that can be accessed via the browser.
 Crass uses Google Apps Script.
 
 With this in place you can avoid people making changes in your sheet that don't meet your requirements :)
