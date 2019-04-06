@@ -11,7 +11,7 @@
     <h2>Update entry</h2>
 
     <form id="form">
-      <input value="customers" id="sheet" type="hidden" name="sheet">
+      <input value="<?!= object.sheet ?>" id="sheet" type="hidden" name="sheet">
       <input value="<?!= object._id ?>" id="_id" type="hidden" name="_id">
       
       <input id="name" type="text" name="name" value="<?!= object.name ?>"><label for="name">Name</label><br><br>      

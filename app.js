@@ -21,6 +21,9 @@ function doGet(e) {
   
   if (page === 'new') {
 
+    var object = {}
+    object['sheet'] = sheet
+
     var t = HtmlService.createTemplateFromFile('new');
     t.object = object
     return t.evaluate();
