@@ -10,7 +10,7 @@ Clone the repo to a new Google Apps Script project
 
 # Usage
 
-Make sure the your Google Sheet has one column with a unique identifier. Rename this field to `_id`
+Make sure that your Google Sheet has one column with a unique identifier. Rename this field to `_id`. Besides, your column headers are the field_names. So it is recommended to remove spaces and use fieldNames.
 
 Add the id of the Google Sheet in `config.js`. You can find the id in the URL of your Sheet
 
@@ -28,27 +28,27 @@ Add the fields that you want to show in your overview in `view.html` by adding l
 
 Add the fields that you want users to be able to create to `new.html` by adding lines like:
 
-    <input id="field_name" type="text" name="field_name">
-    <label for="field_name">Field name</label><br><br> 
+    <input id="fieldName" type="text" name="fieldName">
+    <label for="fieldName">Field name</label><br><br> 
 
 Add the fields that you want users to be able to update to `update.html` by adding lines like:
 
-    <input id="field_name" type="text" name="field_name" value="<?!= object.field_name ?>">
-    <label for="field_name">Field_name</label><br><br> 
+    <input id="fieldName" type="text" name="fieldName" value="<?!= object.fieldName ?>">
+    <label for="fieldName">Field name</label><br><br> 
 
 Deploy your script as Web App under a new version
 
-Click on 'test your web app for the latest code' to see your database.
+Click on `test your web app for the latest code` to see your database.
 
 # Validation
 
 If you want to add validation/manipulation to your create and update you can add this in `validate.js`. Add a block for your sheet, add checks, and specify error messages. The error messages will show up in the form.
 
-  if (sheet === 'customers') {
-    if (!object.name) {throw 'Please provide a name'}
+    if (sheet === 'customers') {
+      if (!object.name) {throw 'Please provide a name'}
     
-    object.name = object.name.trim()
-  }
+      object.name = object.name.trim()
+    }
 
   # FAQ
 
