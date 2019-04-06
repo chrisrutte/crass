@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= HtmlService.createHtmlOutputFromFile('bootstrap').getContent() ?>
+  </head>
+  <body>
+   
+    <div class="container">
+
+    <h2>Update entry</h2>
+
+    <form id="form">
+      <input value="customers" id="sheet" type="hidden" name="sheet">
+      <input value="<?!= object._id ?>" id="_id" type="hidden" name="_id">
+      
+      <input id="name" type="text" name="name" value="<?!= object.name ?>"><label for="name">Name</label><br><br>      
+      <input id="age" type="text" name="age" value="<?!= object.age ?>"><label for="age">Age</label><br><br> 
+
+      <button type="button" onclick="google.script.run.withSuccessHandler(onSuccess) .withFailureHandler(onFailure) .update(document.querySelector('form'));">Submit</button>
+    </form>
+    <br>
+    
+    <div id="feedback"></div>
+    
+    <div><a href="<?!= ScriptApp.getService().getUrl() ?>?page=view">Back to overview</a></div>
+
+    
+    <script>
+    function onSuccess(result) {
+
+      document.getElementById('feedback').innerHTML = 'Saved successfully'; //displays in item with the 'feedback' id
+
+    }
+
+    function onFailure(e) {
+      document.getElementById('feedback').innerHTML = 'Not Saved. Error: ' + e; //displays in item with the 'feedback' id
+    }
+    </script>
+    
+  </body>
+</html>
+
+

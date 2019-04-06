@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <?!= HtmlService.createHtmlOutputFromFile('bootstrap').getContent() ?>
+  </head>
+  <body>
+   
+    <div class="container">
+
+    <h2>Overview</h2>
+    <div><a href="<?!= ScriptApp.getService().getUrl() ?>?page=new">Create new entry</a></div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Age</th>
+      <th scope="col">Update entry</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <? for (i in object ) { ?>
+    <tr>
+      <td><?= object[i].name ?></td>
+      <td><?= object[i].age ?></td>
+      <td><a href="<?!= ScriptApp.getService().getUrl() ?>?page=update&id=<?= object[i]._id ?>">Update enty</a></td>
+    </tr>
+  <? } ?>
+  </tbody>
+</table>
+    
+    </div>
+    
+  </body>
+</html>
