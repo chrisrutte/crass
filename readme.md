@@ -9,7 +9,7 @@ This is an easy way to move your Google Sheet more towards a database, benefits 
 * enforces required fields on new entries
 * ability to easily setup notifications if specific fields are changed
 
-![alt text](https://github.com/chrisrutte/crass/src/public/capture.png "Result")
+![alt text](https://github.com/chrisrutte/crass/blob/master/src/public/capture.PNG "Result")
 
 # Installation
 
