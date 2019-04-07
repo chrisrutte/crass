@@ -31,7 +31,7 @@ function doGet(e) {
   
   if (page === 'view') {
     
-    var object = getAll('customers')
+    var object = getAll(sheet)
     
     var t = HtmlService.createTemplateFromFile('views/view');
     t.object = object
