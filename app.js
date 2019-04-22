@@ -1,3 +1,5 @@
+// https://script.google.com/a/peachpayments.com/macros/s/AKfycbxBZ1-9Pf0aUjioKZ098_WHyUOL0IwMCuWePk5m_IY/dev
+
 function doGet(e) {
   
   var page = e.parameter.page
@@ -12,7 +14,7 @@ function doGet(e) {
     var id = e.parameter.id
     
     var object = getById(sheet, id)
-    object['sheet'] = sheet
+    object['sheet'] = sheet  // sheet value is provided in the form
     
     var t = HtmlService.createTemplateFromFile('views/update');
     t.object = object
